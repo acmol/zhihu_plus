@@ -1,0 +1,19 @@
+{
+  "name": "zhihu",
+  "version": "0.9.0",
+  "description": "2wu statics",
+  "browser_action": {
+    "default_title": "zhihu无效用户统计",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2,
+  "background": {
+        "page":"background.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.zhihu.com/question/*/answer/*"],
+      "js": ["js/jquery.js", "js/zhihu.js"]
+    }
+  ]
+}
